@@ -1,0 +1,168 @@
+.container {
+  font-size: 14px;
+  padding: 0rpx;
+  background: #ffffff;
+}
+
+.date {
+ display: flex; /* 启用 Flexbox 布局 */
+  flex-direction: row; /* 子元素横向排列 (默认值，也可以不写) */
+  justify-content: space-around; /* 子元素均匀分布，每个元素两侧的间隔相等 */
+  /* 或者使用 justify-content: space-between; 如果你希望第一个和最后一个元素分别贴边 */
+  align-items: center; /* 子元素在交叉轴上居中对齐 (垂直居中) */
+  width: 100%; /* 容器宽度占据整个屏幕 */
+
+  box-sizing: border-box; /* 确保内边距和边框包含在元素的总宽度内 */
+}
+
+
+.date-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  margin-right: 1px;
+  border-radius: 8px;
+  background: #f8f8f8;
+  color: #333;
+  font-size: 14px;
+  transition: background 0.2s, color 0.2s;
+}
+.date-item.active {
+  background: #e6f0ff;
+  color: #1890ff;
+  font-weight: bold;
+  border: 1px solid #1890ff;
+}
+
+
+.date-day {
+  font-size: 13px;
+}
+.date-date {
+  font-size: 12px;
+}
+
+
+
+.menu {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+
+
+
+.menu-header {
+  display: flex;
+  background: #1890ff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 0 0 0 0;
+  margin-top: 10px;
+}
+
+
+.menu-th {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+.menu-content {
+  background: #fff;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+.menu-row {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #222;
+  padding: 12px 0;
+}
+.menu-row.row-alt {
+  background: #f4f8fc;
+}
+.menu-td {
+  flex: 1;
+  text-align: center;
+  word-break: break-all;
+}
+
+
+
+.developer {
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+  margin: 20rpx 0;
+}
+
+
+
+.ads {
+  margin: 20rpx 0;
+}
+
+.ad-image {
+  width: 100%;
+}
+.movable-area{
+  /* 这个属性设置为none,让所有事件穿透过去 */
+  pointer-events:none;
+  z-index: 100;
+  width: 50px;
+  height: 200px;
+  position: fixed;
+  top: 220px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.movable-view{
+  /* 重设为auto,覆盖父属性设置 */
+  pointer-events:auto;
+  height: 90rpx;
+  width: 100rpx;
+  flex-direction: column;
+  display: flex;
+  background: #f8f8f8;
+  font-size: 14px;
+  transition: background 0.2s, color 0.2s;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+.odd {
+  background-color: #fff;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  line-height: 90rpx;  /** 垂直居中 **/ 
+  text-align: center;   /** 水平居中 **/
+}
+
+.even {
+  line-height: 90rpx;  /** 垂直居中 **/ 
+  background-color: #add8e6;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.even.active {
+  background: #e6f0ff;
+  color: #1890ff;
+  font-weight: bold;
+  border: 1px solid #1890ff;
+}
