@@ -19,7 +19,7 @@
 
   <!-- 菜单内容 -->
       <view class="menu-content">
-        <view class="menu-row {{index % 2 == 1 ? 'row-alt' : ''}}" wx:for="{{menuList[currentDate]}}" wx:key="index">
+        <view class="menu-row {{index % 2 == 1 ? 'row-alt' : ''}}" wx:for="{{currentMenuList}}" wx:key="index">
           <view class="menu-td">{{item.type}}</view>
           <view class="menu-td">{{item.name}}</view>
           <view class="menu-td">{{item.price}}</view>
@@ -38,9 +38,9 @@
   </view> -->
   <movable-area class="movable-area">
     <movable-view class="movable-view" direction="vertical">
-    <view class="odd">早餐</view>
-    <view class = "even">午餐</view>
-    <view class="odd">晚餐</view>
+      <view class="odd" bindtap="handleTap" data-text="早餐">早餐</view>
+      <view class="even" bindtap="handleTap" data-text="午餐">午餐</view>
+      <view class="odd" bindtap="handleTap" data-text="晚餐">晚餐</view>
     </movable-view>
 </movable-area>
   
